@@ -59,6 +59,7 @@ p {
 .work-title,
 .team-title,
 .portfolio-title,
+.partners-title,
 .features-accent,
 .team-people,
 .portfolio-sample {
@@ -68,7 +69,8 @@ p {
 .features-title,
 .work-title,
 .team-title,
-.portfolio-title {
+.portfolio-title,
+.partners-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
