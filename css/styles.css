@@ -12,7 +12,7 @@
   --portfolio-bg-color: #eeeeee;
   --border-header-color: #ececec;
   --bg-gradient-color: rgba(47, 48, 58, 0.4);
-  --border-icon-color: #AFB1B8;
+  --border-icon-color: #afb1b8;
 }
 
 body {
@@ -252,7 +252,7 @@ p {
   width: 270px;
 }
 
-.features-item::before {
+/* .features-item::before {
   content: '';
   display: block;
   height: 120px;
@@ -262,21 +262,21 @@ p {
   background-color: var(--special-bg-color);
 
   margin-bottom: 30px;
-}
-
+} */
+/* 
 .icon-antenna::before {
   background-image: url(../images/icons/antenna.svg);
-}
+} */
 
-.icon-clock::before  {
+.icon-clock::before {
   background-image: url(../images/icons/clock.svg);
 }
 
-.icon-diagram::before  {
+.icon-diagram::before {
   background-image: url(../images/icons/diagram.svg);
 }
 
-.icon-astronaut::before  {
+.icon-astronaut::before {
   background-image: url(../images/icons/astronaut.svg);
 }
 
@@ -372,20 +372,30 @@ p {
 .team-socials-list {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 .socials-item {
   display: inline-block;
-  content: "";
   width: 44px;
   height: 44px;
-
-background-image: url(../images/icons/socials/instagram.svg);
-background-position: center;
-background-repeat: no-repeat;
+  fill: var(--border-icon-color);
+  border-radius: 50%;
 
   outline: 5px dotted red;
 }
+
+.socials-item:hover {
+  fill: var(--primery-white-color);
+  background-color: var(--accent-color);
+}
+
+.socials-icon {
+  width: 20px;
+  height: 20px;
+  
+}
+
 /* Наші партнери */
 
 .partners-list {
@@ -406,28 +416,27 @@ background-repeat: no-repeat;
   cursor: pointer;
 }
 .icon-client-1 {
-background-image: url(../images/icons/client-1.svg);
+  background-image: url(../images/icons/client-1.svg);
 }
 .icon-client-2 {
-background-image: url(../images/icons/client-2.svg);
+  background-image: url(../images/icons/client-2.svg);
 }
 .icon-client-3 {
-background-image: url(../images/icons/client-3.svg);
+  background-image: url(../images/icons/client-3.svg);
 }
 .icon-client-4 {
-background-image: url(../images/icons/client-4.svg);
+  background-image: url(../images/icons/client-4.svg);
 }
 .icon-client-5 {
-background-image: url(../images/icons/client-5.svg);
+  background-image: url(../images/icons/client-5.svg);
 }
 .icon-client-6 {
-background-image: url(../images/icons/client-6.svg);
+  background-image: url(../images/icons/client-6.svg);
 }
 
 .partners-item:focus,
 .partners-item:hover {
   border: 1px solid var(--accent-color);
-
 }
 /* Портфоліо */
 
