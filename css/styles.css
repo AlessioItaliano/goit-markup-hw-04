@@ -13,6 +13,7 @@
   --border-header-color: #ececec;
   --bg-gradient-color: rgba(47, 48, 58, 0.4);
   --border-icon-color: #afb1b8;
+  --footer-bg-icon: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -133,18 +134,11 @@ p {
 }
 
 .contact-item {
-display: flex;
-align-items: center;
-gap: 10px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-.contact-icon{
-  fill: currentColor;
-
-}
-
-.nav-link,
-.contact-link {
+.nav-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -157,24 +151,31 @@ gap: 10px;
   text-decoration: none;
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.contact-link:hover,
-.contact-link:focus,  {
-  color: var(--accent-color);
-}
-
-.nav-link.current {
-  color: var(--accent-color);
-}
-
 .contact-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  fill: var(--primery-text-color);
   color: var(--primery-text-color);
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.nav-link.current {
+  color: var(--accent-color);
 }
 
 /* Банер */
@@ -250,6 +251,8 @@ gap: 10px;
 .secondary:focus {
   color: var(--primery-white-color);
   background-color: var(--button-primery-bg-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Секція особливості */
@@ -450,6 +453,11 @@ gap: 10px;
   margin-bottom: 0;
 }
 
+.portfolio-parts:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-item {
   background-color: var(--portfolio-bg-color);
   text-decoration: none;
@@ -492,6 +500,12 @@ gap: 10px;
   background-color: var(--primery-bg-color);
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
+}
+
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -526,4 +540,43 @@ gap: 10px;
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
+}
+
+/* Соціальні мережі компанії */
+
+.footer-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14em;
+  color: var(--primery-white-color);
+  text-transform: uppercase;
+}
+
+.footer-socails-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-socials-item {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  fill: var(--primery-white-color);
+  background-color: var(--footer-bg-icon);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer-socials-link:hover {
+  background-color: var(--button-primery-bg-color);
 }
